@@ -1,4 +1,12 @@
+const inputEmail = document.querySelector('input[type="email"]');
 const loginForm = document.querySelector(".login-form");
+
+inputEmail.addEventListener("focus", () => {
+  inputEmail.placeholder = "Type area";
+});
+inputEmail.addEventListener("blur", () => {
+  inputEmail.placeholder = "";
+});
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const form = event.target;

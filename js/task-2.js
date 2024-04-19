@@ -32,6 +32,8 @@ images.forEach((elem) => {
   const img = document.createElement("img");
   img.setAttribute("src", elem.url);
   img.setAttribute("alt", elem.alt);
+  img.style.width = "360px";
+  img.style.height = "300px";
   li.appendChild(img);
   gallery.append(li);
 });
