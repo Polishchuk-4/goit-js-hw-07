@@ -27,7 +27,7 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-images.forEach((elem) => {
+const imgHtmlElem = images.map((elem) => {
   const li = document.createElement("li");
   const img = document.createElement("img");
   img.setAttribute("src", elem.url);
@@ -35,5 +35,18 @@ images.forEach((elem) => {
   img.style.width = "360px";
   img.style.height = "300px";
   li.appendChild(img);
-  gallery.append(li);
+  return li;
 });
+
+gallery.append(...imgHtmlElem);
+
+// images.forEach((elem) => {
+//   const li = document.createElement("li");
+//   const img = document.createElement("img");
+//   img.setAttribute("src", elem.url);
+//   img.setAttribute("alt", elem.alt);
+//   img.style.width = "360px";
+//   img.style.height = "300px";
+//   li.appendChild(img);
+//   gallery.append(li);
+// });
