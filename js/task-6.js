@@ -22,8 +22,12 @@ function createBoxes(amount) {
 
 buttonCreate.addEventListener("click", () => {
   if (input.value >= 1 && input.value <= 100) {
-    createBoxes(input.value);
+    createBoxes(+input.value);
     input.value = "";
+  } else {
+    alert("not a number");
+    input.value = "";
+    return;
   }
 });
 buttonDestroy.addEventListener("click", () => {
